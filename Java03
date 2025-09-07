@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class LeituraDados {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        // Lendo o nome (texto)
+        System.out.print("Digite seu nome: ");
+        String nome = entrada.nextLine(); // nextLine lê a linha inteira (inclusive espaços)
+
+        // Lendo a idade (número inteiro)
+        System.out.print("Digite sua idade: ");
+        int idade = entrada.nextInt();
+
+        // Lendo a altura (número decimal)
+        System.out.print("Digite sua altura (em metros, ex: 1.75): ");
+        double altura = entrada.nextDouble();
+
+        // Exibindo os dados
+        System.out.println("\n--- Dados Informados ---");
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade + " anos");
+        System.out.println("Altura: " + altura + " m");
+
+        entrada.close();
+    }
+}
