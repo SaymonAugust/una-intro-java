@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class OperacoesBasicas {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        // Entrada dos números
+        System.out.print("Digite o primeiro número inteiro: ");
+        int numero1 = entrada.nextInt();
+
+        System.out.print("Digite o segundo número inteiro: ");
+        int numero2 = entrada.nextInt();
+
+        // Operações
+        int subtracao = numero1 - numero2;
+        int multiplicacao = numero1 * numero2;
+
+        // Aqui uso double para divisão, para não perder casas decimais
+        double divisao = 0;
+        if (numero2 != 0) { // Evita divisão por zero
+            divisao = (double) numero1 / numero2;
+        }
+
+        // Saídas
+        System.out.println("Subtração (primeiro - segundo): " + subtracao);
+        System.out.println("Multiplicação (primeiro * segundo): " + multiplicacao);
+
+        if (numero2 != 0) {
+            System.out.println("Divisão (primeiro / segundo): " + divisao);
+        } else {
+            System.out.println("Não é possível dividir por zero!");
+        }
+
+        entrada.close();
+    }
+}
